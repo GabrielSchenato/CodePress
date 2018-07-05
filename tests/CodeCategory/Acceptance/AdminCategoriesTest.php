@@ -61,5 +61,35 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertSee('Category Test');
         });
     }
+    
+    public function test_click_edit_category()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/categories')
+                    ->clickLink("Edit category")
+                    ->assertPathIs('/admin/categories/1/edit');
+        });
+    }
+    
+    public function test_edit_category()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/categories/1/edit')
+                    ->type('name', 'Category Edited')
+                    ->check('active')
+                    ->press('Edit Category')
+                    ->assertPathIs('/admin/categories')
+                    ->assertSee('Category Edited');
+        });
+    }
+    
+    public function test_delete_category()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/categories')
+                    ->press("Delete category")
+                    ->assertDontSee('Category Edited');
+        });
+    }
 
 }
