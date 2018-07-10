@@ -10,7 +10,9 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.6"
+        "laravelcollective/html": "^5.6",
+        "schenato/code-tag": "^0.0.1",
+        "schenato/code-category": "^0.0.1"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -26,10 +28,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "CodePress\\CodeCategory\\": "packages/codecategory/src/CodeCategory",
-            "CodePress\\CodeTag\\": "packages/codetag/src/CodeTag",
-            "CodePress\\CodeDatabase\\": "packages/codedatabase/src/CodeDatabase/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
