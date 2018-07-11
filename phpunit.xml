@@ -19,6 +19,12 @@
         <testsuite name="CodeCategory">
             <directory suffix="Test.php">./tests/CodeCategory</directory>
         </testsuite>
+        <testsuite name="CodeTag">
+            <directory suffix="Test.php">./tests/CodeTag</directory>
+        </testsuite>
+        <testsuite name="CodePosts">
+            <directory suffix="Test.php">./tests/CodePosts</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">

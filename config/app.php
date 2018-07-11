@@ -162,6 +162,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         \CodePress\CodeCategory\Providers\CodeCategoryServiceProvider::class,
         \CodePress\CodeTag\Providers\CodeTagServiceProvider::class,
+        \CodePress\CodePosts\Providers\CodePostServiceProvider::class,
         \Cviebrock\EloquentSluggable\ServiceProvider::class,
 
     ],
