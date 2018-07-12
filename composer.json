@@ -12,8 +12,15 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.6",
         "schenato/code-tag": "^0.0.1",
-        "schenato/code-category": "^0.0.1"
+        "schenato/code-category": "^0.0.1",
+        "codeedu/laravel-tinymce": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codeedu/laravel-tinymce.git"
+        }
+    ],
     "require-dev": {
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
