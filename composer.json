@@ -37,7 +37,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "CodePress\\CodePosts\\": "packages/codeposts/src/CodePosts/"
+            "CodePress\\CodePosts\\": "packages/codeposts/src/CodePosts/",
+            "CodePress\\CodeUser\\": "packages/codeuser/src/CodeUser/"
         }
     },
     "autoload-dev": {
