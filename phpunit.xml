@@ -25,6 +25,9 @@
         <testsuite name="CodePosts">
             <directory suffix="Test.php">./tests/CodePosts</directory>
         </testsuite>
+        <testsuite name="Auth">
+            <directory suffix="Test.php">./tests/Acceptance</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
