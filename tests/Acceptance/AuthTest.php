@@ -23,7 +23,7 @@ class AuthTest extends DuskTestCase
             $browser->driver->manage()->deleteAllCookies();
         });
     }
-    
+
     public function test_can_not_login_in_application()
     {
         $this->browse(function (Browser $browser) {
