@@ -20,6 +20,13 @@ class AdminCategoriesTest extends DuskTestCase
         return factory(User::class)->create();
     }
 
+    public function test_can_not_access_categories()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/categories')
+                    ->assertSee('Password');
+        });
+    }
 
     public function test_can_visit_admin_categories_page()
     {
