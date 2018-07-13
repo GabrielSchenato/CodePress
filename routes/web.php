@@ -1,5 +1,7 @@
 <?php
 
+use CodePress\CodeUser\Facade\Route as CodePressRoute;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-$router = new \CodePress\CodeUser\Routing\Router();
-$router->auth();
-//Auth::routes();
+CodePressRoute::auth();
 
 Route::get('/home', 'HomeController@index')->name('home');

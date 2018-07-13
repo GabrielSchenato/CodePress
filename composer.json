@@ -13,8 +13,8 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.6",
-        "schenato/code-category": "^0.0.1",
-        "schenato/code-tag": "^0.0.1"
+        "schenato/code-posts": "dev-master",
+        "schenato/code-user": "dev-master"
     },
     "repositories": [
         {
@@ -36,9 +36,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "CodePress\\CodePosts\\": "packages/codeposts/src/CodePosts/",
-            "CodePress\\CodeUser\\": "packages/codeuser/src/CodeUser/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
