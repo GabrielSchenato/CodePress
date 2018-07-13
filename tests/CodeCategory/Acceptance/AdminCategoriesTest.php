@@ -3,6 +3,7 @@
 namespace CodePress\CodeCategory\Acceptance\Tests;
 
 use CodePress\CodeCategory\Models\Category;
+use CodePress\CodeUser\Models\User;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
@@ -14,12 +15,17 @@ use Tests\DuskTestCase;
 class AdminCategoriesTest extends DuskTestCase
 {
     
+    protected function getUser()
+    {
+        return factory(User::class)->create();
+    }
 
 
     public function test_can_visit_admin_categories_page()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/admin/categories')
+            $browser->loginAs($this->getUser())
+                    ->visit('/admin/categories')
                     ->assertSee('Categories');
         });
     }
