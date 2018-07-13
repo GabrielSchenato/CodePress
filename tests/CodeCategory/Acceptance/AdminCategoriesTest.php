@@ -24,7 +24,7 @@ class AdminCategoriesTest extends DuskTestCase
     public function test_can_visit_admin_categories_page()
     {
         $this->browse(function (Browser $browser) {
-            $browser->loginAs(User::find(1))
+            $browser->loginAs($this->getUser())
                     ->visit('/admin/categories')
                     ->assertSee('Categories');
         });

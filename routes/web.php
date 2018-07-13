@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('web')
-        ->group(function () {
-            CodePressRoute::auth();
-        });
+
+CodePressRoute::auth();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
