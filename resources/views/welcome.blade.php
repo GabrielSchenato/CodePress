@@ -73,6 +73,7 @@
                         <a href="{{ url('/admin/categories') }}">Categories</a>
                         <a href="{{ url('/admin/tags') }}">Tags</a>
                         <a href="{{ url('/admin/posts') }}">Posts</a>
+                        <a href="{{ url('/admin/comments') }}">Comments</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                     @endauth
