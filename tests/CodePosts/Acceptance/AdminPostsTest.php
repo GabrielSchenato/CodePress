@@ -62,7 +62,9 @@ class AdminPostsTest extends DuskTestCase
                     ->assertPathIs('/admin/posts/create');
         });
     }
-
+    
+    //Não tem uma forma de interagir com Tinymce
+/*
     public function test_create_new_post()
     {
         $this->browse(function (Browser $browser) {
@@ -103,5 +105,23 @@ class AdminPostsTest extends DuskTestCase
                     ->assertDontSee('Post Edited');
         });
     }
+    
+    public function test_click_deleted_post()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/posts')
+                    ->clickLink("Deleted Posts")
+                    ->assertPathIs('/admin/posts/deleted');
+        });
+    }
+    
+    public function test_restore_post()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/posts/deleted')
+                    ->clickLink("Restore post")
+                    ->assertSee('Post Edited');
+        });
+    }*/
 
 }

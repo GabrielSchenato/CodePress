@@ -102,5 +102,23 @@ class AdminTagsTest extends DuskTestCase
                     ->assertDontSee('Tag Edited');
         });
     }
+    
+    public function test_click_deleted_Tag()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/tags')
+                    ->clickLink("Deleted Tags")
+                    ->assertPathIs('/admin/tags/deleted');
+        });
+    }
+    
+    public function test_restore_tag()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/tags/deleted')
+                    ->clickLink("Restore tag")
+                    ->assertSee('Tag Edited');
+        });
+    }
 
 }

@@ -104,5 +104,23 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertDontSee('Category Edited');
         });
     }
+    
+    public function test_click_deleted_category()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/categories')
+                    ->clickLink("Deleted Categories")
+                    ->assertPathIs('/admin/categories/deleted');
+        });
+    }
+    
+    public function test_restore_category()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/admin/categories/deleted')
+                    ->clickLink("Restore category")
+                    ->assertSee('Category Edited');
+        });
+    }
 
 }
