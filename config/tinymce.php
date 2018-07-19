@@ -10,7 +10,6 @@ return [
     },*/
 	'params' => [
 		"selector" => "#mytiny",
-                "height" => 600,
 		"language" => 'pt_BR',
 		"theme" => "modern",
 		"skin" => "lightgray",
