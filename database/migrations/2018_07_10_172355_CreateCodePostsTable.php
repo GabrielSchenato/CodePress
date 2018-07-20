@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+use CodePress\CodePosts\Models\Post;
 /**
  * Description of CreateCodePostsTable
  *
@@ -19,6 +19,7 @@ class CreateCodePostsTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('slug');
+            $table->integer('state')->default(Post::STATE_DRAFT);
             $table->timestamps();
         });
     }
