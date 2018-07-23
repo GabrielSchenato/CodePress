@@ -26,6 +26,7 @@
                         <a href="#">Admin</a>
                         <div class="dropdown-content links">
                             <a href="{{ route('admin.users.index') }}">Users</a>
+                            <a href="{{ route('admin.comments.index') }}">Comments</a>
                             <a href="{{ route('admin.roles.index') }}">Roles</a>
                             <a href="{{ route('admin.permissions.index') }}">Permissions</a>
                             <a href="{{ route('admin.layouts.index') }}">Layouts</a>
