@@ -29,6 +29,9 @@
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
+        "files": [
+            "packages/codeapp/src/CodeApp/helpers.php"
+        ],
         "classmap": [
             "database/seeds",
             "database/factories"
@@ -39,7 +42,8 @@
             "CodePress\\CodePosts\\": "packages/codeposts/src/CodePosts/",
             "CodePress\\CodeCategory\\": "packages/codecategory/src/CodeCategory/",
             "CodePress\\CodeTag\\": "packages/codetag/src/CodeTag/",
-            "CodePress\\CodeUser\\": "packages/codeuser/src/CodeUser/"
+            "CodePress\\CodeUser\\": "packages/codeuser/src/CodeUser/",
+            "CodePress\\CodeApp\\": "packages/codeapp/src/CodeApp/"
         }
     },
     "autoload-dev": {

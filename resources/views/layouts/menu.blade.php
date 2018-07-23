@@ -13,21 +13,22 @@
                 <div class="top-left links">
                     <a href="{{ url('/home') }}">Home</a>
                     @can('access_categories')
-                        <a href="{{ url('/admin/categories') }}">Categories</a>
+                        <a href="{{ route('admin.categories.index') }}">Categories</a>
                     @endcan
                     @can('access_tags')
-                        <a href="{{ url('/admin/tags') }}">Tags</a>
+                        <a href="{{ route('admin.tags.index') }}">Tags</a>
                     @endcan  
                     @can('access_posts')
-                        <a href="{{ url('/admin/posts') }}">Posts</a>
+                        <a href="{{ route('admin.posts.index') }}">Posts</a>
                     @endcan    
                     @can('access_users')
                     <div class="dropdown links">
                         <a href="#">Admin</a>
                         <div class="dropdown-content links">
-                            <a href="{{ url('/admin/users') }}">Users</a>
-                            <a href="{{ url('/admin/roles') }}">Roles</a>
-                            <a href="{{ url('/admin/permissions') }}">Permissions</a>
+                            <a href="{{ route('admin.users.index') }}">Users</a>
+                            <a href="{{ route('admin.roles.index') }}">Roles</a>
+                            <a href="{{ route('admin.permissions.index') }}">Permissions</a>
+                            <a href="{{ route('admin.layouts.index') }}">Layouts</a>
                         </div>
                     </div>
                     @endcan 

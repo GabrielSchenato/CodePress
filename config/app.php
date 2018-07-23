@@ -164,6 +164,7 @@ return [
         \CodePress\CodeTag\Providers\CodeTagServiceProvider::class,
         \CodePress\CodePosts\Providers\CodePostServiceProvider::class,
         \CodePress\CodeUser\Providers\CodeUserServiceProvider::class,
+        \CodePress\CodeApp\Providers\CodeAppServiceProvider::class,
         \Cviebrock\EloquentSluggable\ServiceProvider::class,
 
     ],
