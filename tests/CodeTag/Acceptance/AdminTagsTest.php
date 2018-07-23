@@ -15,11 +15,6 @@ use Tests\DuskTestCase;
 class AdminTagsTest extends DuskTestCase
 {
 
-    protected function getUser()
-    {
-        return factory(User::class)->create();
-    }
-
     public function test_can_not_access_tags()
     {
         $this->browse(function (Browser $browser) {
@@ -31,7 +26,10 @@ class AdminTagsTest extends DuskTestCase
     public function test_can_visit_admin_tags_page()
     {
         $this->browse(function (Browser $browser) {
-            $browser->loginAs($this->getUser())
+            $browser->visit('/login')
+                    ->type('email', 'admin@codepress.com')
+                    ->type('password', '123456')
+                    ->press('Login')
                     ->visit('/admin/tags')
                     ->assertSee('Tags');
         });
@@ -102,7 +100,7 @@ class AdminTagsTest extends DuskTestCase
                     ->assertDontSee('Tag Edited');
         });
     }
-    
+
     public function test_click_deleted_Tag()
     {
         $this->browse(function (Browser $browser) {
@@ -111,7 +109,7 @@ class AdminTagsTest extends DuskTestCase
                     ->assertPathIs('/admin/tags/deleted');
         });
     }
-    
+
     public function test_restore_tag()
     {
         $this->browse(function (Browser $browser) {

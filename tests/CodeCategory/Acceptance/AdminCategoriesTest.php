@@ -14,11 +14,6 @@ use Tests\DuskTestCase;
  */
 class AdminCategoriesTest extends DuskTestCase
 {
-    
-    protected function getUser()
-    {
-        return factory(User::class)->create();
-    }
 
     public function test_can_not_access_categories()
     {
@@ -31,19 +26,22 @@ class AdminCategoriesTest extends DuskTestCase
     public function test_can_visit_admin_categories_page()
     {
         $this->browse(function (Browser $browser) {
-            $browser->loginAs($this->getUser())
+            $browser->visit('/login')
+                    ->type('email', 'admin@codepress.com')
+                    ->type('password', '123456')
+                    ->press('Login')
                     ->visit('/admin/categories')
                     ->assertSee('Categories');
         });
     }
-    
+
     public function test_categories_listing()
     {
         Category::create(['name' => 'Category 1', 'active' => true]);
         Category::create(['name' => 'Category 2', 'active' => true]);
         Category::create(['name' => 'Category 3', 'active' => true]);
         Category::create(['name' => 'Category 4', 'active' => true]);
-        
+
         $this->browse(function (Browser $browser) {
             $browser->visit('/admin/categories')
                     ->assertSee('Category 1')
@@ -53,7 +51,7 @@ class AdminCategoriesTest extends DuskTestCase
         });
         Category::truncate();
     }
-    
+
     public function test_click_create_new_category()
     {
         $this->browse(function (Browser $browser) {
@@ -62,7 +60,7 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertPathIs('/admin/categories/create');
         });
     }
-    
+
     public function test_create_new_category()
     {
         $this->browse(function (Browser $browser) {
@@ -74,7 +72,7 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertSee('Category Test');
         });
     }
-    
+
     public function test_click_edit_category()
     {
         $this->browse(function (Browser $browser) {
@@ -83,7 +81,7 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertPathIs('/admin/categories/1/edit');
         });
     }
-    
+
     public function test_edit_category()
     {
         $this->browse(function (Browser $browser) {
@@ -95,7 +93,7 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertSee('Category Edited');
         });
     }
-    
+
     public function test_delete_category()
     {
         $this->browse(function (Browser $browser) {
@@ -104,7 +102,7 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertDontSee('Category Edited');
         });
     }
-    
+
     public function test_click_deleted_category()
     {
         $this->browse(function (Browser $browser) {
@@ -113,7 +111,7 @@ class AdminCategoriesTest extends DuskTestCase
                     ->assertPathIs('/admin/categories/deleted');
         });
     }
-    
+
     public function test_restore_category()
     {
         $this->browse(function (Browser $browser) {

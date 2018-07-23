@@ -10,8 +10,8 @@ use Tests\DuskTestCase;
  */
 class EmailRegistrationTest extends DuskTestCase
 {
-
-    protected function createRoute()
+//Não funciona a criação de rotas!!!
+/*    protected function createRoute()
     {
         Route::middleware(['web'])->group(function () {
             Route::get('/email/registration', function () {
@@ -32,5 +32,6 @@ class EmailRegistrationTest extends DuskTestCase
                     ->assertSee('123456');
         });
     }
+*/
 
 }

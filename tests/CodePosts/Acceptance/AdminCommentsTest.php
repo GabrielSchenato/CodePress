@@ -15,11 +15,6 @@ use Tests\DuskTestCase;
  */
 class AdminCommentsTest extends DuskTestCase
 {
-        
-    protected function getUser()
-    {
-        return factory(User::class)->create();
-    }
 
     public function test_can_not_access_comments()
     {
@@ -32,7 +27,10 @@ class AdminCommentsTest extends DuskTestCase
     public function test_can_visit_admin_comments_page()
     {
         $this->browse(function (Browser $browser) {
-            $browser->loginAs($this->getUser())
+            $browser->visit('/login')
+                    ->type('email', 'admin@codepress.com')
+                    ->type('password', '123456')
+                    ->press('Login')
                     ->visit('/admin/comments')
                     ->assertSee('Comments');
         });
@@ -41,6 +39,8 @@ class AdminCommentsTest extends DuskTestCase
     public function test_comments_listing()
     {
         $post = Post::create(['title' => 'Post 1', 'content' => 'Conteudo do meu post']);
+        $post->user()->associate(1);
+        $post->save();
         Comment::create(['content' => 'Comment 1', 'post_id' => $post->id]);
         Comment::create(['content' => 'Comment 2', 'post_id' => $post->id]);
         Comment::create(['content' => 'Comment 3', 'post_id' => $post->id]);
@@ -63,7 +63,7 @@ class AdminCommentsTest extends DuskTestCase
                     ->assertSee('Want to do a comment?');
         });
     }
-    
+
     public function test_create_new_comment()
     {
         $this->browse(function (Browser $browser) {
@@ -83,7 +83,7 @@ class AdminCommentsTest extends DuskTestCase
                     ->assertDontSee('My comment');
         });
     }
-    
+
     public function test_click_deleted_comment()
     {
         $this->browse(function (Browser $browser) {
@@ -92,7 +92,7 @@ class AdminCommentsTest extends DuskTestCase
                     ->assertPathIs('/admin/comments/deleted');
         });
     }
-    
+
     public function test_restore_comment()
     {
         $this->browse(function (Browser $browser) {

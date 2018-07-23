@@ -13,12 +13,10 @@ class AuthEditorTest extends DuskTestCase
 
     public function test_can_login_with_editor()
     {
-        
-
         $this->browse(function ($browser) {
             $browser->driver->manage()->deleteAllCookies();
             $browser->visit('/login')
-                    ->type('email', 'editor@codepress')
+                    ->type('email', 'editor@codepress.com')
                     ->type('password', '123456')
                     ->press('Login')
                     ->assertPathIs('/home');

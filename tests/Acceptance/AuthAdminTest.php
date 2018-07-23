@@ -15,7 +15,7 @@ class AuthAdminTest extends DuskTestCase
     {
         $this->browse(function ($browser) {
             $browser->visit('/login')
-                    ->type('email', 'admin@codepress')
+                    ->type('email', 'admin@codepress.com')
                     ->type('password', '123456')
                     ->press('Login')
                     ->assertPathIs('/home');

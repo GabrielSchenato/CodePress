@@ -13,12 +13,10 @@ class AuthRedatorTest extends DuskTestCase
 
     public function test_can_login_with_redator()
     {
-
-
         $this->browse(function ($browser) {
             $browser->driver->manage()->deleteAllCookies();
             $browser->visit('/login')
-                    ->type('email', 'gabriel.schenato@inovadora.com.br')
+                    ->type('email', 'redator@codepress.com')
                     ->type('password', '123456')
                     ->press('Login')
                     ->assertPathIs('/home');
