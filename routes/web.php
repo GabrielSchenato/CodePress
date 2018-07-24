@@ -13,10 +13,6 @@ use CodePress\CodeUser\Facade\Route as CodePressRoute;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 CodePressRoute::auth();
 

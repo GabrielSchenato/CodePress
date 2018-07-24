@@ -17,6 +17,7 @@ class CreateCodePostsTable extends Migration
         Schema::create('codepress_posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->binary('image');
             $table->text('content');
             $table->string('slug');
             $table->integer('state')->default(Post::STATE_DRAFT);

@@ -12,7 +12,13 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.6"
+        "laravelcollective/html": "^5.6",
+        "schenato/code-database": "dev-master",
+        "schenato/code-posts": "dev-master",
+        "schenato/code-category": "dev-master",
+        "schenato/code-tag": "dev-master",
+        "schenato/code-user": "dev-master",
+        "schenato/code-app": "dev-master"
     },
     "repositories": [
         {
@@ -37,13 +43,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "CodePress\\CodeDatabase\\": "packages/codedatabase/src/CodeDatabase/",
-            "CodePress\\CodePosts\\": "packages/codeposts/src/CodePosts/",
-            "CodePress\\CodeCategory\\": "packages/codecategory/src/CodeCategory/",
-            "CodePress\\CodeTag\\": "packages/codetag/src/CodeTag/",
-            "CodePress\\CodeUser\\": "packages/codeuser/src/CodeUser/",
-            "CodePress\\CodeApp\\": "packages/codeapp/src/CodeApp/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
