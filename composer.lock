@@ -1856,12 +1856,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-app.git",
-                "reference": "9e5a723d7bf2953b1a37db42d927af8ca0214974"
+                "reference": "793f387e2dbad49abe40e5a0716c368f3562d1ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-app/zipball/9e5a723d7bf2953b1a37db42d927af8ca0214974",
-                "reference": "9e5a723d7bf2953b1a37db42d927af8ca0214974",
+                "url": "https://api.github.com/repos/schenato/code-app/zipball/793f387e2dbad49abe40e5a0716c368f3562d1ec",
+                "reference": "793f387e2dbad49abe40e5a0716c368f3562d1ec",
                 "shasum": ""
             },
             "require": {
@@ -1897,7 +1897,7 @@
                 "controller",
                 "laravel"
             ],
-            "time": "2018-07-24T19:34:54+00:00"
+            "time": "2018-07-25T14:45:50+00:00"
         },
         {
             "name": "schenato/code-category",
@@ -1905,12 +1905,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-category.git",
-                "reference": "4c32771e68a7383463cf486662a4cc3f7a46de01"
+                "reference": "85992bc486a1f487f255d6be5ac798fdc6175e24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-category/zipball/4c32771e68a7383463cf486662a4cc3f7a46de01",
-                "reference": "4c32771e68a7383463cf486662a4cc3f7a46de01",
+                "url": "https://api.github.com/repos/schenato/code-category/zipball/85992bc486a1f487f255d6be5ac798fdc6175e24",
+                "reference": "85992bc486a1f487f255d6be5ac798fdc6175e24",
                 "shasum": ""
             },
             "require": {
@@ -1953,7 +1953,7 @@
                 "controller",
                 "laravel"
             ],
-            "time": "2018-07-25T11:18:07+00:00"
+            "time": "2018-07-25T14:45:55+00:00"
         },
         {
             "name": "schenato/code-database",
@@ -1961,12 +1961,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-database.git",
-                "reference": "2d87c811d6172c9969ca1a25a3805ccd0c359232"
+                "reference": "9c9397de98d834c27405a6816d3d47ee5de56f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-database/zipball/2d87c811d6172c9969ca1a25a3805ccd0c359232",
-                "reference": "2d87c811d6172c9969ca1a25a3805ccd0c359232",
+                "url": "https://api.github.com/repos/schenato/code-database/zipball/9c9397de98d834c27405a6816d3d47ee5de56f88",
+                "reference": "9c9397de98d834c27405a6816d3d47ee5de56f88",
                 "shasum": ""
             },
             "require": {
@@ -2002,7 +2002,7 @@
                 "laravel",
                 "repository"
             ],
-            "time": "2018-07-24T19:05:09+00:00"
+            "time": "2018-07-25T14:45:58+00:00"
         },
         {
             "name": "schenato/code-posts",
@@ -2010,12 +2010,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-posts.git",
-                "reference": "37f7f9cec7562a8742e8fe9aff21052361ac665f"
+                "reference": "a795ea6b433fdbd81d2362f49f5b3677dd84c106"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-posts/zipball/37f7f9cec7562a8742e8fe9aff21052361ac665f",
-                "reference": "37f7f9cec7562a8742e8fe9aff21052361ac665f",
+                "url": "https://api.github.com/repos/schenato/code-posts/zipball/a795ea6b433fdbd81d2362f49f5b3677dd84c106",
+                "reference": "a795ea6b433fdbd81d2362f49f5b3677dd84c106",
                 "shasum": ""
             },
             "require": {
@@ -2060,7 +2060,7 @@
                 "laravel",
                 "posts"
             ],
-            "time": "2018-07-25T12:50:03+00:00"
+            "time": "2018-07-25T14:46:02+00:00"
         },
         {
             "name": "schenato/code-tag",
@@ -2068,12 +2068,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-tag.git",
-                "reference": "e608dce54aeefca4f7e63f7011a55b13449a2b6a"
+                "reference": "33bcbf917cb31ca69f2de77929e849d56ee73a45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-tag/zipball/e608dce54aeefca4f7e63f7011a55b13449a2b6a",
-                "reference": "e608dce54aeefca4f7e63f7011a55b13449a2b6a",
+                "url": "https://api.github.com/repos/schenato/code-tag/zipball/33bcbf917cb31ca69f2de77929e849d56ee73a45",
+                "reference": "33bcbf917cb31ca69f2de77929e849d56ee73a45",
                 "shasum": ""
             },
             "require": {
@@ -2114,7 +2114,7 @@
                 "laravel",
                 "tags"
             ],
-            "time": "2018-07-24T21:25:50+00:00"
+            "time": "2018-07-25T14:46:06+00:00"
         },
         {
             "name": "schenato/code-user",
@@ -2122,12 +2122,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-user.git",
-                "reference": "37b49cdb89668af7a3624d33c7f8565a9eef763e"
+                "reference": "3b8981c2005470c75207b1fa6aafd7dad6ca2c4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-user/zipball/37b49cdb89668af7a3624d33c7f8565a9eef763e",
-                "reference": "37b49cdb89668af7a3624d33c7f8565a9eef763e",
+                "url": "https://api.github.com/repos/schenato/code-user/zipball/3b8981c2005470c75207b1fa6aafd7dad6ca2c4d",
+                "reference": "3b8981c2005470c75207b1fa6aafd7dad6ca2c4d",
                 "shasum": ""
             },
             "require": {
@@ -2163,7 +2163,7 @@
                 "laravel",
                 "user"
             ],
-            "time": "2018-07-24T19:35:16+00:00"
+            "time": "2018-07-25T14:46:11+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
