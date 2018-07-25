@@ -36,7 +36,7 @@
     },
     "autoload": {
         "files": [
-            "packages/codeapp/src/CodeApp/helpers.php"
+            "schenato/code-app/src/CodeApphelpers.php"
         ],
         "classmap": [
             "database/seeds",
