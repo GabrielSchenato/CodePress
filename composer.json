@@ -13,12 +13,12 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.6",
+        "schenato/code-app": "^0.0.1",
+        "schenato/code-category": "^0.0.1",
         "schenato/code-database": "^0.0.1",
         "schenato/code-posts": "^0.0.1",
-        "schenato/code-category": "^0.0.1",
         "schenato/code-tag": "^0.0.1",
-        "schenato/code-user": "^0.0.1",
-        "schenato/code-app": "^0.0.1"
+        "schenato/code-user": "^0.0.1"
     },
     "repositories": [
         {

@@ -49,7 +49,6 @@ class AdminPostsTest extends DuskTestCase
                     ->assertSee('Post 3')
                     ->assertSee('Post 4');
         });
-        Post::truncate();
     }
 
     public function test_click_create_new_post()

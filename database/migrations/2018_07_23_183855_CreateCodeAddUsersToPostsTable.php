@@ -15,7 +15,7 @@ class CreateCodeAddUsersToPostsTable extends Migration
     public function up()
     {
         Schema::table('codepress_posts', function (Blueprint $table) {
-            $table->integer('user_id')->default(0);
+            $table->integer('user_id')->default(1)->unsigned();
             $table->foreign('user_id')->references('id')->on('codepress_users');
         });
     }

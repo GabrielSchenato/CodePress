@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "629ea2d19997d6b10b9f825cd68b6072",
+    "content-hash": "4081c004b3a859bd111fa3d0a5e25da3",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -2010,12 +2010,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schenato/code-posts.git",
-                "reference": "ad5755813380ddc5cce670476597311f6ce16108"
+                "reference": "37f7f9cec7562a8742e8fe9aff21052361ac665f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schenato/code-posts/zipball/ad5755813380ddc5cce670476597311f6ce16108",
-                "reference": "ad5755813380ddc5cce670476597311f6ce16108",
+                "url": "https://api.github.com/repos/schenato/code-posts/zipball/37f7f9cec7562a8742e8fe9aff21052361ac665f",
+                "reference": "37f7f9cec7562a8742e8fe9aff21052361ac665f",
                 "shasum": ""
             },
             "require": {
@@ -2060,7 +2060,7 @@
                 "laravel",
                 "posts"
             ],
-            "time": "2018-07-24T20:14:14+00:00"
+            "time": "2018-07-25T12:50:03+00:00"
         },
         {
             "name": "schenato/code-tag",
