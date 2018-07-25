@@ -33,5 +33,12 @@ class EmailRegistrationTest extends DuskTestCase
         });
     }
 */
+    public function test_nothing()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/nothing')
+                    ->assertSee('Opsss');
+        });
+    }
 
 }
