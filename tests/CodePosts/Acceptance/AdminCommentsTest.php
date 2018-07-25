@@ -38,7 +38,7 @@ class AdminCommentsTest extends DuskTestCase
 
     public function test_comments_listing()
     {
-        $post = Post::create(['title' => 'Post 1', 'content' => 'Conteudo do meu post']);
+        $post = Post::create(['title' => 'Post 1', 'image' => '123456', 'content' => 'Conteudo do meu post']);
         $post->user()->associate(1);
         $post->save();
         Comment::create(['content' => 'Comment 1', 'post_id' => $post->id]);

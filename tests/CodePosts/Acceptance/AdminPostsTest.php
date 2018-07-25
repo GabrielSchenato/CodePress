@@ -37,10 +37,10 @@ class AdminPostsTest extends DuskTestCase
 
     public function test_posts_listing()
     {
-        Post::create(['title' => 'Post 1', 'content' => 'Conteudo do meu post']);
-        Post::create(['title' => 'Post 2', 'content' => 'Conteudo do meu post']);
-        Post::create(['title' => 'Post 3', 'content' => 'Conteudo do meu post']);
-        Post::create(['title' => 'Post 4', 'content' => 'Conteudo do meu post']);
+        Post::create(['title' => 'Post 1', 'image' => '123456', 'content' => 'Conteudo do meu post']);
+        Post::create(['title' => 'Post 2', 'image' => '123456', 'content' => 'Conteudo do meu post']);
+        Post::create(['title' => 'Post 3', 'image' => '123456', 'content' => 'Conteudo do meu post']);
+        Post::create(['title' => 'Post 4', 'image' => '123456', 'content' => 'Conteudo do meu post']);
 
         $this->browse(function (Browser $browser) {
             $browser->visit('/admin/posts')
