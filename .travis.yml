@@ -21,6 +21,7 @@ install:
 
 before_script:
     - mysql -utravis -e "create database codeuser;"
+    - php artisan serve
 
 script:
     - vendor/bin/phpunit
