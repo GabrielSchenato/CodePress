@@ -23,6 +23,8 @@ install:
 
 before_script:
     - mysql -utravis -e "create database codeuser;"
+    - touch database/database.sqlite
+    - php artisan migrate
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
     - ./vendor/laravel/dusk/bin/chromedriver-linux &
