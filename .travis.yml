@@ -1,4 +1,6 @@
+sudo: required
 language: php
+dist: trusty
 
 php:
     - '7.1'
@@ -17,10 +19,13 @@ before_install:
     - composer selfupdate
     
 install:
-    - composer install
+    - travis_retry composer install --no-interaction
 
 before_script:
     - mysql -utravis -e "create database codeuser;"
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+    - ./vendor/laravel/dusk/bin/chromedriver-linux &
     - php artisan serve &
 
 script:
